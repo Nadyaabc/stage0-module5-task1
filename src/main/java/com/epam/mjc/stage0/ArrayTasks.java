@@ -104,7 +104,7 @@ public class ArrayTasks {
 
         for(int i = 0, j=0; i <arr.length;i++)
         {
-            if (arr[i] > 0) {newarr[j] = arr[i];j++;}
+            if (arr[i] > 0) {newarr[j] = arr[i]; j++;}
         }
         return newarr;
 
