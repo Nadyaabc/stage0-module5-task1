@@ -11,8 +11,7 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-        String[] seasons = {"winter", "spring","summer","autumn" };
-        return seasons;
+        return new String[]{"winter", "spring","summer","autumn"};
     }
 
     /**
@@ -42,9 +41,8 @@ public class ArrayTasks {
      */
     public int totalSum(int[] arr) {
         int sum = 0;
-        for (int i = 0; i < arr.length; i++)
-        {
-            sum += arr[i];
+        for (int j : arr) {
+            sum += j;
         }
         return sum;
     }
@@ -88,7 +86,7 @@ public class ArrayTasks {
     /**
      * Return new int[] array obtained from arr int[] array
      * by choosing positive numbers only.
-     * P.S. 0 is not a positive number =)
+     * P.S. 0 is not a positive number =
      * <p>
      * Example:
      * <p>
@@ -132,18 +130,19 @@ public class ArrayTasks {
                 }
             }
         }
-        int tmp = 0;
+
         for (int i = 0; i < arr.length; i++)
         {
             for (int j = 0; j < arr[i].length; j++)
             {
                 for (int k = j+1; k < arr[i].length; k++)
                 {
-                    if (arr[i][j]< arr[i][k])
-                        tmp = arr[i][j];
+                    if (arr[i][j]< arr[i][k]) {
+                        int tmp = arr[i][j];
                         arr[i][j] = arr[i][k];
                         arr[i][k] = tmp;
                         k--;
+                    }
                 }
             }
         }
